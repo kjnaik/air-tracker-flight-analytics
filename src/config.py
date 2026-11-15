@@ -18,3 +18,15 @@ API_HEADERS = {
     "x-rapidapi-key": API_KEY,
     "x-rapidapi-host": API_HOST,
 }
+
+# Airports to analyse (mix of Indian domestic + international hubs)
+AIRPORT_CODES = [
+    "DEL", "BOM", "BLR", "MAA", "HYD", "CCU",   # India
+    "DXB", "LHR", "JFK", "SIN", "SYD", "FRA",   # International
+]
+
+# How many days of flight history to fetch (each day = 2 API calls per airport)
+DAYS_BACK = 1
+
+REQUEST_TIMEOUT = 30
+MAX_RETRIES = 3

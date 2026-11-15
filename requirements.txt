@@ -6,3 +6,4 @@ plotly
 SQLAlchemy
 pymysql
 cryptography
+tzdata
