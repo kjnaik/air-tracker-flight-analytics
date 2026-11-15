@@ -49,6 +49,12 @@ def _get(path: str, params: dict | None = None) -> dict | list | None:
             if response.status_code in (204, 404):
                 logger.info("No data for %s (%s)", path, response.status_code)
                 return None
+
+            if response.status_code in (400, 403, 422):
+                logger.error("Request rejected (%s) for %s: %s",
+                             response.status_code, path, response.text[:200])
+                return None 
+                      
             response.raise_for_status()
             data = response.json()
             cache_file.write_text(json.dumps(data), encoding="utf-8")

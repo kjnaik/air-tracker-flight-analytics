@@ -1,0 +1,114 @@
+=== AIRPORT ===
+{
+  "icao": "VIDP",
+  "iata": "DEL",
+  "shortName": "Indira Gandhi",
+  "fullName": "New Delhi Indira Gandhi",
+  "municipalityName": "New Delhi",
+  "location": {
+    "lat": 28.5665,
+    "lon": 77.1031
+  },
+  "elevation": {
+    "meter": 236.83,
+    "km": 0.24,
+    "mile": 0.15,
+    "nm": 0.13,
+    "feet": 777.0
+  },
+  "country": {
+    "code": "IN",
+    "name": "India"
+  },
+  "continent": {
+    "code": "AS",
+    "name": "Asia"
+  },
+  "timeZone": "Asia/Kolkata",
+  "urls": {
+    "webSite": "http://www.newdelhiairport.in/",
+    "wikipedia": "https://en.wikipedia.org/wiki/Indira_Gandhi_International_Airport",
+    "flightRadar": "https://www.flightradar24.com/28.57,77.10/14",
+    "googleMaps": "https://www.google.com/maps/@28.566499,77.103103,14z"
+  }
+}
+
+=== FLIGHTS (keys) === ['departures', 'arrivals']
+departures: 402 arrivals: 412
+{
+  "departure": {
+    "scheduledTime": {
+      "utc": "2026-11-15 06:30Z",
+      "local": "2026-11-15 12:00+05:30"
+    },
+    "revisedTime": {
+      "utc": "2026-11-15 06:30Z",
+      "local": "2026-11-15 12:00+05:30"
+    },
+    "terminal": "3",
+    "gate": "17A",
+    "quality": [
+      "Basic",
+      "Live"
+    ]
+  },
+  "arrival": {
+    "airport": {
+      "icao": "VIAR",
+      "iata": "ATQ",
+      "name": "Amritsar",
+      "location": {
+        "lat": 31.7096,
+        "lon": 74.7973
+      },
+      "countryCode": "in",
+      "timeZone": "Asia/Kolkata"
+    },
+    "scheduledTime": {
+      "utc": "2026-11-15 07:40Z",
+      "local": "2026-11-15 13:10+05:30"
+    },
+    "quality": [
+      "Basic"
+    ]
+  },
+  "number": "AI 1114",
+  "status": "Departed",
+  "codeshareStatus": "IsOperator",
+  "isCargo": false,
+  "aircraft": {
+    "model": "Airbus A320 NEO"
+  },
+  "airline": {
+    "name": "Air India",
+    "iata": "AI",
+    "icao": "AIC"
+  }
+}
+
+=== DELAYS ===
+{
+  "airportIcao": "VIDP",
+  "from": {
+    "utc": "2026-11-15 22:08Z",
+    "local": "2026-11-15 22:08+00:00"
+  },
+  "to": {
+    "utc": "2026-11-16 00:08Z",
+    "local": "2026-11-16 00:08+00:00"
+  },
+  "departuresDelayInformation": {
+    "numTotal": 41,
+    "numQualifiedTotal": 41,
+    "numCancelled": 1,
+    "medianDelay": "00:00:00",
+    "delayIndex": 0.0
+  },
+  "arrivalsDelayInformation": {
+    "numTotal": 66,
+    "numQualifiedTotal": 66,
+    "numCancelled": 0,
+    "medianDelay": "00:00:00",
+    "delayIndex": 0.0
+  }
+}

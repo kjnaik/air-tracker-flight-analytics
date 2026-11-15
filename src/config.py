@@ -30,3 +30,6 @@ DAYS_BACK = 1
 
 REQUEST_TIMEOUT = 30
 MAX_RETRIES = 3
+EXTRA_AIRPORT_LIMIT = 20       # full lookups for non-selected airports seen in flights
+MAX_AIRCRAFT_LOOKUPS = 60      # detailed aircraft lookups (others keep model from flight data)
+DELAY_THRESHOLD_MIN = 15       # a flight is 'Delayed' if later than this
