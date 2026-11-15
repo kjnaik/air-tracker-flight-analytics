@@ -43,7 +43,17 @@ def create_schema(engine: Engine) -> None:
         logger.exception("Failed to create schema")
         raise
 
+def run_query(engine: Engine, sql: str, params: dict | None = None):
+    """Run a read-only SQL query and return a pandas DataFrame."""
+    import pandas as pd
+    try:
+        with engine.connect() as conn:
+            return pd.read_sql(text(sql), conn, params=params or {})
+    except SQLAlchemyError:
+        logger.exception("Query failed")
+        raise
 
+    
 if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO)
     eng = get_engine()
@@ -51,3 +61,4 @@ if __name__ == "__main__":
     with eng.connect() as connection:
         tables = connection.execute(text("SHOW TABLES")).fetchall()
         print("Tables:", [t[0] for t in tables])
+
